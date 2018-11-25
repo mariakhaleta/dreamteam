@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.195" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/loginEditText"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:ems="10"
@@ -44,22 +44,23 @@
         app:layout_constraintVertical_bias="0.32" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/passwordEditText"
         android:layout_width="215dp"
         android:layout_height="40dp"
         android:layout_marginBottom="12dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Войти"
+        android:onClick="OnLogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
