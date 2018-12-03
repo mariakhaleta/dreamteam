@@ -8,6 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 public class MainContentLayout extends AppCompatActivity {
+
+    //private static final String SERVER_IP_ADDRESS = "http://10.12.40.125/SERVER_IP_ADDRESS/booksList.php/";
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,4 +31,6 @@ public class MainContentLayout extends AppCompatActivity {
                     }
                 });
     }
+
+
 }

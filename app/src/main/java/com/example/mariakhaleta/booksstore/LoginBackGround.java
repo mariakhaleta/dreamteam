@@ -1,10 +1,7 @@
 package com.example.mariakhaleta.booksstore;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -22,7 +19,7 @@ public class LoginBackGround extends AsyncTask<String, Void, String> {
     Context context;
     String result;
 
-    private static final String SERVER_IP_ADDRESS = "http://192.168.1.2/";
+    private static final String SERVER_IP_ADDRESS = "http://192.168.1.6/";
     private static final String SERVER_LOGIN_PAGE = "login.php/";
     private static final String SERVER_REGESTRATION_PAGE = "regestration.php/";
 

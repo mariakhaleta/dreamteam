@@ -80,4 +80,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.632" />
 
+    <Button
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="397dp"
+        android:onClick="test"
+        tools:ignore="MissingConstraints" />
+
 </android.support.constraint.ConstraintLayout>
