@@ -26,13 +26,19 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recylcerView"
-        android:layout_width="match_parent"
-        android:layout_height="409dp"
+    <Button
+        android:id="@+id/button"
+        android:onClick="test3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="48dp"
-        />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:text="Button"
+        tools:ignore="OnClick" />
 
 
 </RelativeLayout>

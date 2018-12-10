@@ -15,9 +15,9 @@ public class Books {
     private String genre;
     private String vendorCode;
     private String cover;
-    private String price;
+    private Integer price;
 
-    public Books(Integer bookID, String title, String author, String langOfPub, String dateOfPub, String description, String audiobook, String textpreview, String binding, String publisher, String genre, String vendorCode, String cover, String price) {
+    public Books(Integer bookID, String title, String author, Integer price) {
         this.bookID = bookID;
         this.title = title;
         this.author = author;
@@ -34,9 +34,13 @@ public class Books {
         this.price = price;
     }
 
+    public Books(String title, Integer price, String cover) {
+        this.title = title;
+        this.price = price;
+        this.cover = cover;
+    }
 
-
-    public String getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
