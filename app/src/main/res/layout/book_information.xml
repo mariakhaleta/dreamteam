@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookInfoActivity"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_margin="17dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:maxWidth="20dp"
+            android:maxHeight="19dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:contentDescription="Add to favourites" />
+
+        <TextView
+            android:id="@+id/back"
+            android:onClick="Back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Назад"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="20dp"
+            android:maxWidth="19dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/store_image"
+            android:contentDescription="Add to basket" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/coverInfo"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="23dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Book image"
+            android:maxWidth="125dp"
+            android:maxHeight="185dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_book_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="22dp">
+
+            <TextView
+                android:id="@+id/titleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/authorInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author"
+                android:textColor="#454545"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/genreInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#454545"
+                android:lineSpacingExtra="-2sp"
+                android:text="Genre"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="20dp"
+                android:maxWidth="19dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_place_black_24dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#454545"
+                android:text="Наличие в магазинах"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="20dp"
+                    android:maxWidth="19dp"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_expand_more_black_24dp"
+                    />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#454545"
+                android:text="Подробнее"
+                />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="19dp">
+
+        <TextView
+            android:id="@+id/priceInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            android:textColor="#454545"
+            android:text="000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#454545"
+            android:text=" грн."
+            android:layout_marginTop="5dp"
+            />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="КУПИТЬ" />
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:layout_marginLeft="17dp"
+            android:layout_marginBottom="19dp">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:maxWidth="30dp"
+                android:maxHeight="30dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:contentDescription="Add to favourites" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#454545"
+                android:text="Oтложить"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="29dp"
+                android:maxWidth="29dp"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_volume_up_black_24dp"
+                />
+            <TextView
+                android:id="@+id/audioInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#454545"
+                android:text="Аудио книга"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="29dp"
+                android:maxWidth="29dp"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_book_black_"
+                />
+            <TextView
+                android:id="@+id/previewInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#454545"
+                android:text="Прочесть отрывок"
+
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:text="Автор: "
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:id="@+id/authorInfoPodrob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author"
+            android:textColor="#454545"
+            android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#999999"
+                android:text="Жанр: "
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:id="@+id/genreInfoPodrob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Genre"
+                android:textColor="#454545"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#999999"
+                android:text="Издательство: "
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:id="@+id/publisherInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NoName"
+                android:textColor="#454545"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#999999"
+                android:text="Год издания: "
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:id="@+id/dateOfPubInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000"
+                android:textColor="#454545"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#999999"
+                android:text="Язык: "
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:id="@+id/langOfPubInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Language"
+                android:textColor="#454545"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#999999"
+                android:text="Переплет: "
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:id="@+id/bindingInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bindings"
+                android:textColor="#454545"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#999999"
+                android:text="Тип: "
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Бумажная"
+                android:textColor="#454545"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#999999"
+        android:text="Аннотация"
+        android:layout_marginLeft="20dp"
+        />
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/descriptionInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:text="Цього ранку він прокинувся від того, що лягаві вдерлися в будинок і звинуватили у зґвалтуванні трьох жінок. Але він упевнений, що не робив цього! Принаймні не пам’ятає. Але чому? Можливо, якась із двадцяти трьох особистостей, що мешкали у його свідомості, замовчувала цей факт? Психіатри ще не стикалися з такою хворобою. Чи скоїв Мілліган усі ці злочини, чи він талановитий актор, який"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"/>
+    </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -59,7 +59,10 @@ public class Regestration extends AppCompatActivity {
                 break;
             }
             case "": {
-                //TODO: Server unavailable(Toast)
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Нет доступа к серверу.", Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
                 break;
             }
         }

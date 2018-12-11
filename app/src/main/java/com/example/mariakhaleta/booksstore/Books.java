@@ -17,7 +17,8 @@ public class Books {
     private String cover;
     private Integer price;
 
-    public Books(Integer bookID, String title, String author, Integer price) {
+
+    public Books(Integer bookID, String title, String author, String langOfPub, String dateOfPub, String description, String audiobook, String textpreview, String binding, String publisher, String genre, String vendorCode, String cover, Integer price) {
         this.bookID = bookID;
         this.title = title;
         this.author = author;
@@ -34,11 +35,18 @@ public class Books {
         this.price = price;
     }
 
-    public Books(String title, Integer price, String cover) {
+    public Books(int bookID, String title, int price, String cover) {
+        this.bookID = bookID;
         this.title = title;
         this.price = price;
         this.cover = cover;
     }
+
+    //    public Books(String title, Integer price, String cover) {
+//        this.title = title;
+//        this.price = price;
+//        this.cover = cover;
+//    }
 
     public Integer getPrice() {
         return price;

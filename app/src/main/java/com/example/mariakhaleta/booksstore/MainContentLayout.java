@@ -59,7 +59,7 @@ public class MainContentLayout extends AppCompatActivity {
 
     }
     public void test3(View view) {
-        Intent intent = new Intent(this, BooksListView.class);
+        Intent intent = new Intent(mCurrentActivity, BooksListView.class);
         startActivity(intent);
     }
 

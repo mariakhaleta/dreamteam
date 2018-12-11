@@ -31,7 +31,6 @@ public class BooksListView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mContext = this;
 
         mRecyclerView = findViewById(R.id.recyclerView);
@@ -42,6 +41,12 @@ public class BooksListView extends AppCompatActivity {
 
         loadProducts();
     }
+
+//    public void TestToBookInfo(View view) {
+//        Intent intent = new Intent(mContext, BookInfoActivity.class);
+//        //showMessage(String.valueOf(mRecyclerView.getChildAdapterPosition(view)));
+//        startActivity(intent);
+//    }
 
     private void loadProducts() {
 
@@ -55,13 +60,14 @@ public class BooksListView extends AppCompatActivity {
                             JSONObject books = array.getJSONObject(i);
 
                             mProductList.add(new Books(
+                                    books.getInt("BookID") ,
                                     books.getString("Title"),
                                     books.getInt("Price"),
                                     books.getString("Cover")
                             ));
                         }
 
-                        mRecyclerView.setAdapter(new BookPresenter(mProductList, mContext));
+                        mRecyclerView.setAdapter(new BooksController(mProductList, mContext));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
