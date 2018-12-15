@@ -17,7 +17,6 @@ public class Books {
     private String cover;
     private Integer price;
 
-
     public Books(Integer bookID, String title, String author, String langOfPub, String dateOfPub, String description, String audiobook, String textpreview, String binding, String publisher, String genre, String vendorCode, String cover, Integer price) {
         this.bookID = bookID;
         this.title = title;

@@ -1,11 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BookInfoActivity"
     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/BookTop"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="5dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:maxWidth="20dp"
+            android:maxHeight="19dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            />
+
+        <TextView
+            android:id="@+id/back"
+            android:onClick="Back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Назад"
+            android:layout_gravity="top"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:fontFamily="@font/open_sans_light"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="20dp"
+            android:maxWidth="19dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_shopping_basket_black_24dp"
+            />
+
+    </LinearLayout>
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BookTop"
+        android:layout_marginTop="10dp">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,50 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_margin="17dp">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:maxWidth="20dp"
-            android:maxHeight="19dp"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:src="@drawable/ic_chevron_left_black_24dp"
-            android:contentDescription="Add to favourites" />
-
-        <TextView
-            android:id="@+id/back"
-            android:onClick="Back"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Назад"
-            android:textSize="16sp" />
-
-        <View
-            android:layout_height="0dp"
-            android:layout_width="0dp"
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxHeight="20dp"
-            android:maxWidth="19dp"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent"
-            android:adjustViewBounds="true"
-            android:src="@drawable/store_image"
-            android:contentDescription="Add to basket" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -91,7 +109,8 @@
                 android:layout_height="wrap_content"
                 android:text="Name"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:fontFamily="@font/open_sans_light" />
 
             <TextView
                 android:id="@+id/authorInfo"
@@ -99,7 +118,8 @@
                 android:layout_height="wrap_content"
                 android:text="Author"
                 android:textColor="#454545"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/open_sans_light"/>
             <TextView
                 android:id="@+id/genreInfo"
                 android:layout_width="wrap_content"
@@ -108,6 +128,7 @@
                 android:textColor="#454545"
                 android:lineSpacingExtra="-2sp"
                 android:text="Genre"
+                android:fontFamily="@font/open_sans_light"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -130,6 +151,7 @@
                 android:textSize="16sp"
                 android:textColor="#454545"
                 android:text="Наличие в магазинах"
+                android:fontFamily="@font/open_sans_light"
                 />
             </LinearLayout>
             <LinearLayout
@@ -152,6 +174,7 @@
                 android:textSize="16sp"
                 android:textColor="#454545"
                 android:text="Подробнее"
+                android:fontFamily="@font/open_sans_light"
                 />
             </LinearLayout>
         </LinearLayout>
@@ -171,9 +194,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25sp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:textColor="#454545"
             android:text="000"
+            android:fontFamily="@font/open_sans_light"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -182,85 +207,127 @@
             android:textColor="#454545"
             android:text=" грн."
             android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans_light"
             />
 
         <Button
             android:id="@+id/button"
-            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:text="КУПИТЬ" />
+            android:text="КУПИТЬ"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:fontFamily="@font/open_sans_light"
+            android:layout_marginLeft="25dp"/>
 
     </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            tools:ignore="MissingConstraints" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             tools:ignore="MissingConstraints"
-            android:layout_marginLeft="17dp"
-            android:layout_marginBottom="19dp">
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:maxWidth="30dp"
-                android:maxHeight="30dp"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ic_favorite_border_black_24dp"
-                android:contentDescription="Add to favourites" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#454545"
-                android:text="Oтложить"
-                />
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxHeight="29dp"
-                android:maxWidth="29dp"
-                android:scaleType="fitCenter"
-                android:layout_marginLeft="15dp"
-                android:background="@android:color/transparent"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ic_volume_up_black_24dp"
-                />
-            <TextView
-                android:id="@+id/audioInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#454545"
-                android:text="Аудио книга"
-                />
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxHeight="29dp"
-                android:maxWidth="29dp"
-                android:scaleType="fitCenter"
-                android:layout_marginLeft="15dp"
-                android:background="@android:color/transparent"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ic_book_black_"
-                />
-            <TextView
-                android:id="@+id/previewInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#454545"
-                android:text="Прочесть отрывок"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
 
-                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="45dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Add to favourites"
+                    android:maxWidth="30dp"
+                    android:maxHeight="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_favorite_border_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="Oтложить"
+                    android:textColor="#454545"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="45dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:maxWidth="29dp"
+                    android:maxHeight="29dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_volume_up_black_24dp" />
+
+                <TextView
+                    android:id="@+id/audioInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="Аудио книга"
+                    android:textColor="#454545"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:maxWidth="29dp"
+
+                    android:maxHeight="29dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_book_black_" />
+
+                <TextView
+                    android:id="@+id/previewInfo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="Читать"
+                    android:textColor="#454545"
+                    android:textSize="14sp"
+
+                    />
+
+
+            </LinearLayout>
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:background="@android:color/darker_gray"
 
             tools:ignore="MissingConstraints" />
@@ -279,7 +346,8 @@
             android:textSize="16sp"
             android:textColor="#999999"
             android:text="Автор: "
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/open_sans_light"/>
 
         <TextView
             android:id="@+id/authorInfoPodrob"
@@ -287,7 +355,8 @@
             android:layout_height="wrap_content"
             android:text="Author"
             android:textColor="#454545"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:fontFamily="@font/open_sans_light"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -300,6 +369,7 @@
                 android:textColor="#999999"
                 android:text="Жанр: "
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/open_sans_light"
                 />
             <TextView
                 android:id="@+id/genreInfoPodrob"
@@ -307,7 +377,8 @@
                 android:layout_height="wrap_content"
                 android:text="Genre"
                 android:textColor="#454545"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/open_sans_light"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -320,6 +391,7 @@
                 android:textColor="#999999"
                 android:text="Издательство: "
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/open_sans_light"
                 />
             <TextView
                 android:id="@+id/publisherInfo"
@@ -327,7 +399,8 @@
                 android:layout_height="wrap_content"
                 android:text="NoName"
                 android:textColor="#454545"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/open_sans_light"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -340,6 +413,7 @@
                 android:textColor="#999999"
                 android:text="Год издания: "
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/open_sans_light"
                 />
             <TextView
                 android:id="@+id/dateOfPubInfo"
@@ -347,7 +421,8 @@
                 android:layout_height="wrap_content"
                 android:text="0000"
                 android:textColor="#454545"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/open_sans_light"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -360,6 +435,7 @@
                 android:textColor="#999999"
                 android:text="Язык: "
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/open_sans_light"
                 />
             <TextView
                 android:id="@+id/langOfPubInfo"
@@ -367,7 +443,8 @@
                 android:layout_height="wrap_content"
                 android:text="Language"
                 android:textColor="#454545"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/open_sans_light"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -380,6 +457,7 @@
                 android:textColor="#999999"
                 android:text="Переплет: "
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/open_sans_light"
                 />
             <TextView
                 android:id="@+id/bindingInfo"
@@ -387,7 +465,8 @@
                 android:layout_height="wrap_content"
                 android:text="Bindings"
                 android:textColor="#454545"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/open_sans_light"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -400,13 +479,15 @@
                 android:textColor="#999999"
                 android:text="Тип: "
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/open_sans_light"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Бумажная"
                 android:textColor="#454545"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans_light"/>
         </LinearLayout>
     </LinearLayout>
     <TextView
@@ -416,6 +497,7 @@
         android:textColor="#999999"
         android:text="Аннотация"
         android:layout_marginLeft="20dp"
+        android:fontFamily="@font/open_sans_light"
         />
         <TextView
             android:layout_marginLeft="20dp"
@@ -426,7 +508,10 @@
             android:textColor="#999999"
             android:text="Цього ранку він прокинувся від того, що лягаві вдерлися в будинок і звинуватили у зґвалтуванні трьох жінок. Але він упевнений, що не робив цього! Принаймні не пам’ятає. Але чому? Можливо, якась із двадцяти трьох особистостей, що мешкали у його свідомості, замовчувала цей факт? Психіатри ще не стикалися з такою хворобою. Чи скоїв Мілліган усі ці злочини, чи він талановитий актор, який"
             android:layout_marginTop="13dp"
-            android:layout_marginBottom="13dp"/>
+            android:layout_marginBottom="13dp"
+            android:fontFamily="@font/open_sans_light"/>
     </LinearLayout>
     </ScrollView>
+    </RelativeLayout>
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

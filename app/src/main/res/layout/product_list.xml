@@ -85,5 +85,7 @@
                 android:layout_marginVertical="7dp"
                 android:textSize="12sp"
                 android:text="Price"/>
+
+
         </LinearLayout>
 </LinearLayout>

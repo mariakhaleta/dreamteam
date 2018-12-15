@@ -1,84 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="14dp"
-        android:layout_margin="17dp">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:maxWidth="20dp"
-            android:maxHeight="19dp"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:src="@drawable/ic_chevron_left_black_24dp"
-            android:contentDescription="Add to favourites" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/back"
-            android:text="Назад"
-            android:textSize="13sp"
-            />
-
-        <View
-            android:layout_height="0dp"
-            android:layout_width="0dp"
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxHeight="20dp"
-            android:maxWidth="19dp"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent"
-            android:adjustViewBounds="true"
-            android:src="@drawable/store_image"
-            android:contentDescription="Add to basket" />
-    </LinearLayout>
-        <View
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/darker_gray"
-
-            tools:ignore="MissingConstraints" />
+            android:layout_height="55dp"
+            android:id="@+id/UserTop"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:layout_alignParentTop="true">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bookstore"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Middle"
+            android:layout_below="@+id/UserTop"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/MidUserText"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:textColor="#999999"
             android:letterSpacing="0.01"
-            tools:text="Имя"
+            android:text="Имя"
+            android:fontFamily="@font/open_sans_light"
             />
+
         <TextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="#000000"
             android:letterSpacing="0.01"
-            tools:text="Бойко Ксения"
+            android:text=""
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:letterSpacing="0.01"
+            android:text="Фамилия"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
+            />
+        <TextView
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:letterSpacing="0.01"
+            android:text=""
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:letterSpacing="0.02"
+            android:text="Дата рождения"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
+            />
+        <TextView
+            android:id="@+id/birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="0sp"
+            android:text=""
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -86,18 +127,21 @@
             android:textSize="16sp"
             android:textColor="#999999"
             android:letterSpacing="0.02"
-            tools:text="Дата рождения"
+            android:text="Номер телефона"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
             />
         <TextView
+            android:id="@+id/number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="#000000"
             android:letterSpacing="0.01"
             android:lineSpacingExtra="0sp"
-            tools:text="14.03.1999"
+            android:text=""
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -105,46 +149,47 @@
             android:textSize="16sp"
             android:textColor="#999999"
             android:letterSpacing="0.02"
-            tools:text="Номер телефона"
+            android:text="Е-мейл"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
             />
         <TextView
+            android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="#000000"
             android:letterSpacing="0.01"
             android:lineSpacingExtra="0sp"
-            tools:text="0961705037"
+            android:text=""
             android:layout_marginTop="10dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="#999999"
-            android:letterSpacing="0.02"
-            tools:text="Е-мейл"
-            android:layout_marginTop="10dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="#000000"
-            android:letterSpacing="0.01"
-            android:lineSpacingExtra="0sp"
-            tools:text="ksenia1@gmail.com"
-            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_light"
             />
     </LinearLayout>
+            </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MidUserText"
+            android:layout_above="@+id/UserBot"
+            tools:ignore="NotSibling">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="17dp"
-        >
+        android:layout_marginLeft="29dp">
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -161,9 +206,9 @@
             android:textSize="16sp"
             android:textColor="#999999"
             android:letterSpacing="0.02"
-            tools:text="Список желаний"
-            android:layout_marginStart="30dp"
-            />
+            android:text="Список желаний"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/open_sans_light"/>
 
     </LinearLayout>
         <View
@@ -174,10 +219,11 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="29dp"
+            android:layout_marginLeft="29dp"
             android:layout_marginTop="17dp"
             android:layout_marginBottom="17dp"
             >
+
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -194,8 +240,9 @@
                 android:textSize="16sp"
                 android:textColor="#999999"
                 android:letterSpacing="0.01"
-                tools:text="Настройки"
-                android:layout_marginStart="30dp"
+                android:text="Настройки"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/open_sans_light"
                 />
 
         </LinearLayout>
@@ -208,9 +255,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="29dp"
             android:layout_marginTop="20dp"
-            >
+            android:layout_marginLeft="29dp">
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -222,15 +268,66 @@
                 android:src="@drawable/ic_delete_black_24dp"
                 />
             <TextView
-                android:layout_marginStart="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textColor="#999999"
                 android:letterSpacing="0.01"
-                tools:text="Удалить аккаунт"
-                />
+                android:text="Удалить аккаунт"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/open_sans_light"/>
+        </LinearLayout>
 
         </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/UserBot"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+            android:background="#fff">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="90dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:onClick="Home"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_home_black_24dp" />
+
+        <ImageButton
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_shopping_cart_black_24dp"
+            android:layout_marginRight="90dp"
+            android:onClick="Shop"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_person_red_24dp"
+            android:onClick="Person"/>
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

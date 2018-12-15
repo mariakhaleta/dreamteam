@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_schedules"
+        android:id="@+id/navigation_home"
         android:enabled="true"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="Home"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_favorites"
+        android:id="@+id/navigation_shop"
         android:enabled="true"
         android:icon="@drawable/ic_shopping_cart_black_24dp"
         android:title="Shop"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_music"
+        android:id="@+id/navigation_user"
         android:enabled="true"
         android:icon="@drawable/ic_person_outline_black_24dp"
         android:title="User Account"

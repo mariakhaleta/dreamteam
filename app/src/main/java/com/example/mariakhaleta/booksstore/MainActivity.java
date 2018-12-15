@@ -1,5 +1,6 @@
 package com.example.mariakhaleta.booksstore;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,10 +14,14 @@ import java.util.concurrent.ExecutionException;
 public class MainActivity extends AppCompatActivity {
 
     EditText loginEditText, passwordEditText;
+    public static final String EXTRA_USER_ID = "EXTRA_USER_ID";
+    private Context mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter);
+        mContext = this;
         loginEditText = (EditText)findViewById(R.id.loginEditText);
         passwordEditText = (EditText)findViewById(R.id.passwordEditText);
     }
@@ -27,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void test(View view) {
-        Intent intent = new Intent(MainActivity.this, MainContentLayout.class);
+        Intent intent = new Intent(MainActivity.this, BooksListView.class);
         startActivity(intent);
     }
 
@@ -49,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (serverResult) {
             case "login is success": {
-                Intent intent = new Intent(this, MainContentLayout.class);
+                Intent intent = new Intent(this, BooksListView.class);
                 startActivity(intent);
                 break;
             }
@@ -68,5 +73,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
         }
+    }
+
+    public void test33(View view) {
+        Intent intent = new Intent(mContext, StoreListView.class);
+        startActivity(intent);
     }
 }

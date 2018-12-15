@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">booksstore</string>
+    <string name="register"><u>Продолжить без входа</u></string>
 </resources>

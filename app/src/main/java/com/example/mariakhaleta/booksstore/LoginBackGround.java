@@ -19,10 +19,6 @@ public class LoginBackGround extends AsyncTask<String, Void, String> {
     Context context;
     String result;
 
-    private static final String SERVER_IP_ADDRESS = "http://192.168.1.6/";
-    private static final String SERVER_LOGIN_PAGE = "login.php/";
-    private static final String SERVER_REGESTRATION_PAGE = "regestration.php/";
-
     public LoginBackGround(Context ctx) {
 
         context = ctx;
@@ -33,8 +29,8 @@ public class LoginBackGround extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... params) {
 
         String type = params[0];
-        String url_login = SERVER_IP_ADDRESS + SERVER_LOGIN_PAGE;
-        String url_regestration = SERVER_IP_ADDRESS + SERVER_REGESTRATION_PAGE;
+        String url_login = BDConstant.SERVER_LOGIN_PAGE;
+        String url_regestration = BDConstant.SERVER_REGESTRATION_PAGE;
 
         if (type.equals("login"))
             try {

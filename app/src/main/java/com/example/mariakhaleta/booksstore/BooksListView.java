@@ -1,10 +1,12 @@
 package com.example.mariakhaleta.booksstore;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -20,12 +22,12 @@ import java.util.List;
 
 public class BooksListView extends AppCompatActivity {
 
-    private static final String SERVER_IP_ADDRESS = "http://192.168.1.6/booksList.php/";
     private static final Integer GRID_ELEMENTS_COUNT = 2;
 
     private Context mContext;
     private List<Books> mProductList;
     private RecyclerView mRecyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class BooksListView extends AppCompatActivity {
         mProductList = new ArrayList<>();
 
         loadProducts();
+
     }
 
 //    public void TestToBookInfo(View view) {
@@ -50,7 +53,7 @@ public class BooksListView extends AppCompatActivity {
 
     private void loadProducts() {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, SERVER_IP_ADDRESS,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, BDConstant.BOOKS_LIST,
                 response -> {
                     try {
                         showMessage("Connection to server established");
@@ -67,6 +70,7 @@ public class BooksListView extends AppCompatActivity {
                             ));
                         }
 
+                        //showMessage(mProductList.toString());
                         mRecyclerView.setAdapter(new BooksController(mProductList, mContext));
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -82,5 +86,20 @@ public class BooksListView extends AppCompatActivity {
     private void showMessage(String message) {
         Toast toast = Toast.makeText(mContext, message, Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+    public void Home(View view) {
+        Intent intent = new Intent(mContext, BooksListView.class);
+        startActivity(intent);
+    }
+
+    public void Shop(View view) {
+        Intent intent = new Intent(mContext, StoreListView.class);
+        startActivity(intent);
+    }
+
+    public void Person(View view) {
+        Intent intent = new Intent(mContext, UserOwnCabinet.class);
+        startActivity(intent);
     }
 }

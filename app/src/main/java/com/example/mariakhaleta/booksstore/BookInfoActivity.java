@@ -19,7 +19,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class BookInfoActivity extends AppCompatActivity {
-    private static final String SERVER_IP_ADDRESS = "http://192.168.1.6/booksList.php/";
     private static final Integer DEFAULT_BOOK_ID = 0;
 
     private Context mContext;
@@ -63,7 +62,7 @@ public class BookInfoActivity extends AppCompatActivity {
 
     private void loadProducts() {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, SERVER_IP_ADDRESS,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, BDConstant.BOOKS_LIST,
                 response -> {
                     try {
                         showMessage("Connection to server established");
