@@ -61,6 +61,7 @@ public class BooksController extends RecyclerView.Adapter<ProductViewHolder> {
         });
     }
 
+
     @Override
     public int getItemCount() {
         return mBookList.size();

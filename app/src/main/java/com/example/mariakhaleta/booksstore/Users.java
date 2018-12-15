@@ -2,7 +2,7 @@ package com.example.mariakhaleta.booksstore;
 
 public class Users {
 
-    private Integer BookID;
+    private Integer UserID;
     private String Name;
     private String LastName;
     private String PhoneNumber;
@@ -10,7 +10,7 @@ public class Users {
     private String Email;
 
     public Users(Integer bookID, String name, String lastName, String phoneNumber, String birthday, String email) {
-        BookID = bookID;
+        UserID = bookID;
         Name = name;
         LastName = lastName;
         PhoneNumber = phoneNumber;
@@ -18,8 +18,8 @@ public class Users {
         Email = email;
     }
 
-    public Integer getBookID() {
-        return BookID;
+    public Integer getUserID() {
+        return UserID;
     }
 
     public String getName() {

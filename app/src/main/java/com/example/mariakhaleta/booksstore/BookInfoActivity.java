@@ -60,8 +60,7 @@ public class BookInfoActivity extends AppCompatActivity {
         loadProducts();
     }
 
-    private void loadProducts() {
-
+    public void loadProducts() {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, BDConstant.BOOKS_LIST,
                 response -> {
                     try {
@@ -100,6 +99,7 @@ public class BookInfoActivity extends AppCompatActivity {
                 });
 
         Volley.newRequestQueue(mContext).add(stringRequest);
+
     }
 
     private void showMessage(String message) {

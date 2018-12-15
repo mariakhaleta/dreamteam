@@ -92,4 +92,123 @@ public class BooksUnitTest {
         assertNotEquals(mBooks.getAuthor(), Author);
     }
 
+    @Test
+    public void book_book_langofpub_positive() {
+        assertEquals(mBooks.getLangOfPub(), LANG_OF_PUB);
+    }
+
+    @Test
+    public void book_book_langofpub_negative() {
+        String LangOfOub = "";
+
+        assertNotEquals(mBooks.getLangOfPub(), LangOfOub);
+    }
+
+    @Test
+    public void book_book_dateofpub_positive() {
+        assertEquals(mBooks.getDateOfPub(), DATA_OF_PUB);
+    }
+
+    @Test
+    public void book_book_dateofpub_negative() {
+        String DateOfPub = "";
+
+        assertNotEquals(mBooks.getDateOfPub(), DateOfPub);
+    }
+
+    @Test
+    public void book_book_description_positive() {
+        assertEquals(mBooks.getDescription(), DESCRIPTION);
+    }
+
+    @Test
+    public void book_book_description_negative() {
+        String Description = "";
+
+        assertNotEquals(mBooks.getDescription(), Description);
+    }
+
+    @Test
+    public void book_book_textpreview_positive() {
+        assertEquals(mBooks.getTextpreview(), TEXT_PREVIEW);
+    }
+
+    @Test
+    public void book_book_textpreview_negative() {
+        String Textpreview = "";
+
+        assertNotEquals(mBooks.getTextpreview(), Textpreview);
+    }
+
+    @Test
+    public void book_book_binding_positive() {
+        assertEquals(mBooks.getBinding(), BINDING);
+    }
+
+    @Test
+    public void book_book_binding_negative() {
+        String Binding = "";
+
+        assertNotEquals(mBooks.getAuthor(), Binding);
+    }
+
+    @Test
+    public void book_book_publisher_positive() {
+        assertEquals(mBooks.getPublisher(), PUBLISHER);
+    }
+
+    @Test
+    public void book_book_publisher_negative() {
+        String Publisher = "";
+
+        assertNotEquals(mBooks.getPublisher(), Publisher);
+    }
+
+    @Test
+    public void book_book_genre_positive() {
+        assertEquals(mBooks.getGenre(), GENRE);
+    }
+
+    @Test
+    public void book_book_genre_negative() {
+        String Genre = "";
+
+        assertNotEquals(mBooks.getGenre(), Genre);
+    }
+
+    @Test
+    public void book_book_vendorcode_positive() {
+        assertEquals(mBooks.getVendorCode(), VENDOR_CODE);
+    }
+
+    @Test
+    public void book_book_vendorcode_negative() {
+        String Vendorcode = "";
+
+        assertNotEquals(mBooks.getVendorCode(), Vendorcode);
+    }
+
+    @Test
+    public void book_book_cover_positive() {
+        assertEquals(mBooks.getCover(), COVER);
+    }
+
+    @Test
+    public void book_book_cover_negative() {
+        String Cover= "";
+
+        assertNotEquals(mBooks.getCover(), Cover);
+    }
+
+    @Test
+    public void book_book_audiobook_positive() {
+        assertEquals(mBooks.getAudiobook(), AUDIOBOOK);
+    }
+
+    @Test
+    public void book_book_audiobook_negative() {
+        String Audiobook = "";
+
+        assertNotEquals(mBooks.getAudiobook(), Audiobook);
+    }
 }

@@ -39,10 +39,10 @@ public class UserOwnCabinet extends AppCompatActivity {
         mLastName = findViewById(R.id.lastName);
 
 
-        loadProducts();
+        AtClientData();
     }
 
-    private void loadProducts() {
+    private void AtClientData() {
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, BDConstant.USER_ENTER,
                 response -> {
